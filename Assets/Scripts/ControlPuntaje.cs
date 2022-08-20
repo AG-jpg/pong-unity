@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ControlPuntaje : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class ControlPuntaje : MonoBehaviour
     {
         if(this.puntajeJugador1 >= this.metaGanar || this.puntajeJugador2 >= this.metaGanar)
         {
-            print("Juego Ganado");
+            SceneManager.LoadScene("Juego Terminado");
         }
     }
 
