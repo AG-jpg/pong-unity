@@ -5,6 +5,7 @@ using UnityEngine;
 public class ControlColision : MonoBehaviour
 {
     public MoverPelota moverPelota;
+    public ControlPuntaje controlPuntaje;
 
     void ReboteRaqueta(Collision2D c)
     {
@@ -36,11 +37,11 @@ public class ControlColision : MonoBehaviour
             this.ReboteRaqueta(collision);
         }else if(collision.gameObject.name == "Pared Izquierda")
         {
-            print("Pared izquierda golpeada");
+            this.controlPuntaje.GolJugador2();
         }
         else if(collision.gameObject.name == "Pared Derecha")
         {
-            print("Pared derecha golpeada");
+            this.controlPuntaje.GolJugador1();
         }
     }
 }
